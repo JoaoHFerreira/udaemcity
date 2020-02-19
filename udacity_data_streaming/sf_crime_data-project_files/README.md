@@ -22,5 +22,8 @@ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --maste
 ![kafka_consumer_console_output](https://github.com/JoaoHFerreira/udaemcity/blob/master/udacity_data_streaming/sf_crime_data-project_files/kafka_consumer_console_output.png)
 ## Progress Reporter Screenshot
 ![progress_reporter](https://github.com/JoaoHFerreira/udaemcity/blob/master/udacity_data_streaming/sf_crime_data-project_files/progress_reporter.png)
-# Spark Streaming UI
-![spark_streaming_ui](https://github.com/JoaoHFerreira/udaemcity/blob/master/udacity_data_streaming/sf_crime_data-project_files/spark_streaming_ui.png.png)
+## Spark Streaming UI
+![spark_streaming_ui](https://github.com/JoaoHFerreira/udaemcity/blob/master/udacity_data_streaming/sf_crime_data-project_files/spark_streaming_ui.png)
+## Q&A
+1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
+2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
