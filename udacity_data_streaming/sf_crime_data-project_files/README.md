@@ -25,5 +25,12 @@ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --maste
 ## Spark Streaming UI
 ![spark_streaming_ui](https://github.com/JoaoHFerreira/udaemcity/blob/master/udacity_data_streaming/sf_crime_data-project_files/spark_streaming_ui.png)
 ## Q&A
-1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
-2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
+### 1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
+Change parameters shou can be used in different use cases. Increasing the maxOffsetsPerTrigger for example, you will have a higher troughout at the same time will have higher latency. Each scenario will have a different approach.
+### 2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
+Like every scenario, there' is no right anwser, one solution for each different problem. In a generic scendario where performance need but fault tolerance is alos, I would choose:
+- 1.spark.streaming.kafka.maxRatePerPartition 
+- 2.spark.streaming.receiver.writeAheadLog.enable
+- 3.spark.streaming.kafka.maxRetries
+- 4.spark.streaming.kafka.minRatePerPartition
+Explaining the decision, 1 and 4 to guarantee a max and minimal troughput. 4 because some times crashs happens in a momentary way, this simple action would previne. 1 is similar to 4 reason, but additionally It prevents the streaming application of more several system failures
