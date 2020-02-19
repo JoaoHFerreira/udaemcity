@@ -18,3 +18,5 @@ The first command will start the zookeper and kafka servers, the second one will
 ```
 spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py
 ```
+## kafka_consumer_console_output
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
